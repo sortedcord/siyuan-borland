@@ -1,33 +1,28 @@
 {
-  "name": "theme-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/theme-sample",
-  "version": "0.0.3",
+  "name": "Siyuan Borland",
+  "author": "sortedcord",
+  "url": "https://github.com/sortedcord/siyuan-borland",
+  "version": "0.0.1",
   "minAppVersion": "2.8.8",
   "displayName": {
-    "default": "Theme Sample",
-    "zh_CN": "主题示例"
+    "default": "Siyuan Borland"
   },
   "description": {
-    "default": "This is a theme sample",
-    "zh_CN": "这是一个主题示例"
+    "default": "Siyuan Theme following the retro Turbo color scheme"
   },
   "readme": {
-    "default": "README.md",
-    "zh_CN": "README_zh_CN.md"
+    "default": "README.md"
   },
   "funding": {
     "openCollective": "",
     "patreon": "",
     "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
+    "custom": []
   },
   "modes": [
-    "light"
+    "dark"
   ],
   "keywords": [
-    "sample", "示例"
+    "blue"
   ]
 }

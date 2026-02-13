@@ -1,3 +1,129 @@
 :root {
-    --b3-theme-primary: #d23f31;
+    /*
+            Borland color scheme (classic IDE / terminal palette)
+            background: #0000A4
+            foreground: #FFFF4E
+        */
+
+    /* Palette */
+    --borland-color-01: #4F4F4F;
+    /* Black (Host) */
+    --borland-color-02: #FF6C60;
+    /* Red (Syntax string) */
+    --borland-color-03: #A8FF60;
+    /* Green (Command) */
+    --borland-color-04: #FFFFB6;
+    /* Yellow */
+    --borland-color-05: #96CBFE;
+    /* Blue */
+    --borland-color-06: #FF73FD;
+    /* Magenta */
+    --borland-color-07: #C6C5FE;
+    /* Cyan */
+    --borland-color-08: #EEEEEE;
+    /* White */
+
+    --borland-color-09: #7C7C7C;
+    /* Bright Black */
+    --borland-color-10: #FFB6B0;
+    /* Bright Red */
+    --borland-color-11: #CEFFAC;
+    /* Bright Green */
+    --borland-color-12: #FFFFCC;
+    /* Bright Yellow */
+    --borland-color-13: #B5DCFF;
+    /* Bright Blue */
+    --borland-color-14: #FF9CFE;
+    /* Bright Magenta */
+    --borland-color-15: #DFDFFE;
+    /* Bright Cyan */
+    --borland-color-16: #FFFFFF;
+    /* Bright White */
+
+    --borland-background: #0000A4;
+    --borland-foreground: #FFFF4E;
+    --borland-cursor: #FFFF4E;
+
+    /* Core theme variables (SiYuan / b3) */
+    --b3-theme-background: var(--borland-background);
+    --b3-theme-on-background: var(--borland-foreground);
+
+    /* “Primary” is used a lot for focus/selection; map to Borland blue family. */
+    --b3-theme-primary: var(--borland-color-05);
+    --b3-theme-primary-lighter: var(--borland-color-13);
+
+    /* Highlights & search */
+    --b3-protyle-search-background: var(--borland-color-04);
+    --b3-protyle-search-border-color: var(--borland-color-12);
+    --b3-protyle-search-current-background: var(--borland-color-13);
+
+    --b3-highlight-color: #000000;
+    --b3-highlight-background: var(--borland-color-04);
+    --b3-highlight-current-background: var(--b3-theme-primary-lighter);
+
+    /* Cards (errors/warnings/info/success) */
+    --b3-card-error-color: var(--borland-color-02);
+    --b3-card-error-background: #1a1aa8;
+
+    --b3-card-warning-color: var(--borland-color-04);
+    --b3-card-warning-background: #1515a8;
+
+    --b3-card-info-color: var(--borland-color-07);
+    --b3-card-info-background: #1212a8;
+
+    --b3-card-success-color: var(--borland-color-03);
+    --b3-card-success-background: #1010a8;
+
+    /* Inline / WYSIWYG */
+    --b3-protyle-inline-strong-color: var(--borland-foreground);
+    --b3-protyle-inline-em-color: var(--borland-foreground);
+    --b3-protyle-inline-s-color: var(--borland-color-09);
+    --b3-protyle-inline-link-color: var(--borland-color-05);
+    --b3-protyle-inline-link-hover-color: var(--borland-color-13);
+
+    --b3-protyle-inline-mark-background: var(--borland-color-04);
+    --b3-protyle-inline-mark-color: #000000;
+
+    --b3-protyle-inline-tag-background: var(--borland-color-06);
+    --b3-protyle-inline-tag-color: #000000;
+
+    --b3-protyle-inline-code-color: var(--borland-color-15);
+    --b3-protyle-inline-code-background: rgba(255, 255, 255, 0.12);
+
+    --b3-protyle-inline-blockref-color: var(--borland-color-07);
+    --b3-protyle-inline-blockref-hover-color: var(--borland-color-14);
+
+    /* Code blocks */
+    --b3-protyle-code-background: rgba(0, 0, 0, 0.18);
+
+    /* Tables */
+    --b3-table-border-color: rgba(255, 255, 255, 0.25);
+    --b3-table-th-color: rgba(255, 255, 255, 0.10);
+    --b3-table-trn-color: rgba(255, 255, 255, 0.06);
+    --b3-table-tr2n-color: rgba(0, 0, 0, 0.10);
+
+    /* Menus / file tree */
+    --b3-menu-highlight-color: var(--borland-color-04);
+    --b3-menu-highlight-focus-color: var(--borland-color-12);
+    --b3-menu-highlight-background: rgba(255, 255, 255, 0.10);
+
+    /* Headings (keep Borland-like bright accents) */
+    --custom-h1-color: var(--borland-color-12);
+    --custom-h2-color: var(--borland-color-04);
+    --custom-h2-border-color: rgba(255, 255, 255, 0.25);
+    --custom-h3-color: var(--borland-color-13);
+    --custom-h4-color: var(--borland-color-07);
+    --custom-h5-color: var(--borland-color-08);
+    --custom-h6-color: var(--b3-theme-on-background);
+
+    /* Blockquote */
+    --custom-blockquote-border-color: rgba(255, 255, 255, 0.25);
+    --custom-blockquote-background-color: rgba(0, 0, 0, 0.12);
+
+    /* Callouts (map to palette) */
+    --b3-callout-note: var(--borland-color-05);
+    --b3-callout-tip: var(--borland-color-03);
+    --b3-callout-caution: var(--borland-color-10);
+    --b3-callout-important: var(--borland-color-06);
+    --b3-callout-warning: var(--borland-color-04);
 }
