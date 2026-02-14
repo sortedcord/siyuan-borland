@@ -19,30 +19,52 @@ window.destroyTheme = () => {
         }
     };
 
-    const statusElement = document.getElementById("status");
-    if (statusElement) {
-        setStyles(statusElement, {
-            backgroundColor: "black",
-            color: "white",
-        });
-        setBorder(statusElement, { sides: ["Bottom", "Right", "Left"] });
-    }
+    let isFocused = document.hasFocus();
+    const getBorderColor = () => (isFocused ? "#ffff4A" : "#000064");
 
-    const outerframeElement = document.getElementById("toolbar");
-    if (outerframeElement) {
-        setStyles(outerframeElement, { backgroundColor: "#000080" });
-        setBorder(outerframeElement, { sides: ["Top", "Left", "Right"] });
-    }
+    const applyThemeBorder = () => {
+        const borderColor = getBorderColor();
 
-    const dockleftElement = document.getElementById("dockLeft");
-    if (dockleftElement) {
-        setStyles(dockleftElement, { backgroundColor: "#000080" });
-        setBorder(dockleftElement, { sides: ["Left"] });
-    }
+        const statusElement = document.getElementById("status");
+        if (statusElement) {
+            // keep original styling
+            setStyles(statusElement, { backgroundColor: "black", color: "white" });
+            setBorder(statusElement, { color: borderColor, sides: ["Bottom", "Right", "Left"] });
+        }
 
-    const dockrightElement = document.getElementById("dockRight");
-    if (dockrightElement) {
-        setStyles(dockrightElement, { backgroundColor: "#000080" });
-        setBorder(dockrightElement, { sides: ["Right"] });
+        const outerframeElement = document.getElementById("toolbar");
+        if (outerframeElement) {
+            setStyles(outerframeElement, { backgroundColor: "#000080" });
+            setBorder(outerframeElement, { color: borderColor, sides: ["Top", "Left", "Right"] });
+        }
+
+        const dockleftElement = document.getElementById("dockLeft");
+        if (dockleftElement) {
+            setStyles(dockleftElement, { backgroundColor: "#000080" });
+            setBorder(dockleftElement, { color: borderColor, sides: ["Left"] });
+        }
+
+        const dockrightElement = document.getElementById("dockRight");
+        if (dockrightElement) {
+            setStyles(dockrightElement, { backgroundColor: "#000080" });
+            setBorder(dockrightElement, { color: borderColor, sides: ["Right"] });
+        }
+    };
+
+    window.addEventListener("focus", () => {
+        isFocused = true;
+        applyThemeBorder();
+    });
+
+    window.addEventListener("blur", () => {
+        isFocused = false;
+        applyThemeBorder();
+    });
+
+    applyThemeBorder();
+
+    const windowButtons = document.getElementById("windowControls");
+    if (windowButtons) {
+        windowButtons.style.display = "none";
     }
 })();
