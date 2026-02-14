@@ -127,3 +127,7 @@
     --b3-callout-important: var(--borland-color-06);
     --b3-callout-warning: var(--borland-color-04);
 }
+
+.layout__resize--lr {
+    background-color: var(--borland-color-05) !important;
+}
